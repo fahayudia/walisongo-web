@@ -1,0 +1,634 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e5ece6;
+    color: hwb(143 29% 61%);
+    line-height: 1.6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(234, 232, 226, 0.96);
+    border-bottom: 1px solid #ddd8ca;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0b8858;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.logo span {
+    margin-right: 5px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #43524a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #b58a3a;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background:linear-gradient(rgba(84, 78, 78, 0.65), rgba(56, 59, 56, 0.65)),
+        url("assets/images/Walisongo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    padding: 50px 25px;
+    color: rgb(251, 250, 250);
+}
+
+.subtitle {
+    color: #b58a3a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    max-width: 650px;
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #d5ae60;
+}
+
+.hero p:not(.subtitle) {
+    max-width: 620px;
+    color: #fcf9f9;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #a98824;
+    color: white;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #98732e;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 90px 25px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #b58a3a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-top: 8px;
+}
+
+.intro {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro-text {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.intro-text p {
+    margin-bottom: 18px;
+    color: #000000;
+    text-align: justify;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.info-box {
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    border-left: 5px solid #b58a3a;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+.info-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.info-box h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.info-box p {
+    color: #000000;
+    text-align: justify;
+}
+
+.walisongo-section {
+    background: #eef1eb;
+}
+
+.wali-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.wali-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+    
+    /* Pengaturan Flexbox untuk card */
+    display: flex;
+    flex-direction: column;
+}
+
+.wali-image {
+    height: 190px;
+    background: #174c38;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wali-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wali-image span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #b58a3a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.wali-content {
+    padding: 23px;
+    
+    /* Pengaturan Flexbox agar area konten melar */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.wali-content h3 {
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+
+.location {
+    color: #b58a3a;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.wali-content > p:not(.location) {
+    color: #66716b;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.wali-content button {
+    border: none;
+    background: transparent;
+    color: #174c38;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    
+    /* Pengaturan agar tombol terdorong ke bawah dan rata kiri */
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.wali-content button:hover {
+    color: #b58a3a;
+}
+
+.dakwah-section {
+    background: #f7f4ec;
+}
+
+.method-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.method-card {
+    background: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid #b58a3a;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.method-card > div {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.method-card h3 {
+    margin-bottom: 8px;
+}
+
+.method-card p {
+    color: #69746e;
+    font-size: 14px;
+}
+
+.about-section {
+    background: #174c38;
+    color: white;
+}
+
+.about-content {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.about-content > div:last-child p {
+    color: #d8dfda;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #103426;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #c8d0cb;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    max-width: 800px; 
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    max-height: 85vh; 
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.modal-label {
+    color: #b58a3a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.modal-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+    color: #59645e;
+}
+
+@media (max-width: 900px) {
+    .wali-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .method-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-menu {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #f7f4ec;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid #ddd8ca;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .hero {
+        min-height: 570px;
+    }
+    .hero h1 {
+        font-size: 38px;
+    }
+    section {
+        padding: 65px 20px;
+    }
+    .section-title h2 {
+        font-size: 30px;
+    }
+    .intro-content,
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .wali-grid {
+        grid-template-columns: 1fr;
+    }
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-content h2 {
+        font-size: 32px;
+    }
+    .modal-content {
+        padding: 30px 25px;
+    }
+}
+.modal-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 3px solid #b58a3a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    height: 35px;
+    width: auto;
+}
+
+.footer-logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   TAMBAHAN BARU: DETAIL LENGKAP MODAL WALISONGO
+   ===================================================== */
+
+#modalMethod {
+    display: block;
+    margin-top: 20px;
+}
+
+.detail-section {
+    padding: 26px 30px;
+    border-top: 1px solid #e6e2d6;
+}
+
+.detail-section h3 {
+    font-size: 22px;
+    color: #174c38;
+    margin-bottom: 12px;
+}
+
+.modal-content .detail-section p {
+    text-align: justify;
+    line-height: 1.9;
+    color: #59645e;
+    margin-bottom: 12px;
+}
+
+.detail-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Kotak khusus Wafat */
+.detail-wafat {
+    background: #f7f4ec;
+    border: 1px solid #ece6d6;
+    border-left: 5px solid #b58a3a;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
+/* Daftar keteladanan */
+.detail-section ul {
+    padding-left: 22px;
+}
+
+.detail-section li {
+    color: #59645e;
+    line-height: 1.8;
+    margin-bottom: 6px;
+}
+
+/* Peta */
+.map-wrap {
+    margin: 18px 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e6e2d6;
+}
+
+.map-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: 0;
+}
+
+.btn-maps {
+    display: inline-block;
+    background: #174c38;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 22px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-maps:hover {
+    background: #b58a3a;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 650px) {
+    .detail-section {
+        padding: 22px 8px;
+    }
+    .map-wrap iframe {
+        height: 280px;
+    }
+    .btn-maps {
+        display: block;
+        text-align: center;
+    }
+}
